@@ -1,0 +1,95 @@
+terraform/.terraform/
+terraform/*.tfstate
+terraform/terraform.tfstate
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environment
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Pytest cache and coverage
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+*.pytest_cache/
+*.coverage
+.tox/
+.pytest_cache/
+
+# Environments
+.env
+.env.*
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.terraform.lock.hcl
+
+# Terraform backup files
+*.backup
+
+# Terraform plan file
+*.tfplan
+
+# Local .terraform directories
+**/.terraform/*
+
+# Override and configuration files
+terraform.tfvars
+terraform.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Logs and crash reports
+crash.log
+*.log
+
+# Ignore specific files
+.DS_Store
+*.log
+*.bak
+
+# Ignore lock files
+Pipfile.lock
+poetry.lock
+run.sh

@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  book_catalog:
+    image: book-catalog:2
+    build:
+      context: ./book_catalog
+      dockerfile: Dockerfile
+      platforms:
+        - "linux/amd64"
+        - "linux/arm64"
+    environment:
+      - DATABASE_URL={DATABASE_URL}
+    volumes:
+      - ./book_catalog:/app
+    ports:
+      - "8000:8000"
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+  inventory_management:
+    image: inventory-management:2
+    build:
+      context: ./inventory_management
+      dockerfile: Dockerfile
+      platforms:
+        - "linux/amd64"
+        - "linux/arm64"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    volumes:
+      - ./inventory_management:/app
+    ports:
+      - "8001:8000"
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
