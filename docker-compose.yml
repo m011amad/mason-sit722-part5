@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   book_catalog:
-    image: book-catalog:2
+    image: book-catalog:1
     build:
       context: ./book_catalog
       dockerfile: Dockerfile
@@ -18,7 +18,7 @@ services:
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000
 
   inventory_management:
-    image: inventory-management:2
+    image: inventory-management:1
     build:
       context: ./inventory_management
       dockerfile: Dockerfile
