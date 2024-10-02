@@ -1,7 +1,12 @@
 # Initialises Terraform providers and sets their version numbers.
 
 terraform {
-
+  backend "azurerm" {
+    resource_group_name  = "deakinuni"
+    storage_account_name = "terraformbackendmason"
+    container_name       = "terraform"
+    key                  = "prod.terraform.tfstate"
+  }
 
   required_providers {
     azurerm = {
