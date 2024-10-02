@@ -43,8 +43,8 @@ jobs:
 
       - uses: azure/aks-set-context@v3
         with:
-          resource-group: "sit722cnpart5actions"
-          cluster-name: "sit722cnpart5actions"
+          resource-group: "sit722week99"
+          cluster-name: "sit722week99"
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v1
