@@ -51,9 +51,9 @@ jobs:
 
       - uses: azure/docker-login@v2
         with:
-          login-server: ${{ env.CONTAINER_REGISTRY }}
-          username: ${{ env.REGISTRY_UN }}
-          password: ${{ env.REGISTRY_PW }}
+          login-server: ${{ secrets.CONTAINER_REGISTRY }}
+          username: ${{ secrets.REGISTRY_UN }}
+          password: ${{ secrets.REGISTRY_PW }}
 
       - name: Build
         run: |
